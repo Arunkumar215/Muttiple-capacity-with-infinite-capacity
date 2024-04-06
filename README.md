@@ -18,12 +18,45 @@ Queuing are the most frequently encountered problems in everyday life. For examp
 
 
 ## Experiment:
+![image](https://github.com/Arunkumar215/Muttiple-capacity-with-infinite-capacity/assets/166196271/4e7cedc8-f59e-4a0e-8bcb-6d10526068e1)
+
+![image](https://github.com/Arunkumar215/Muttiple-capacity-with-infinite-capacity/assets/166196271/baac1d72-9064-48ef-aaef-06ac2ec164bb)
 
 
 ## Program
-
+```
+Name:Arunkumar S A
+Reg no:212223220009
+arr_time=float(input("Enter the mean inter arrival time of objects from Feeder (in secs): "))
+ser_time=float(input("Enter the mean  inter service time of Lathe Machine (in secs) :  "))
+Robot_time=float(input("Enter the Additional time taken for the Robot (in secs) :  "))
+lam=1/arr_time
+mu=1/(ser_time+Robot_time)
+print("--------------------------------------------------------------")
+print("Single Server with Infinite Capacity - (M/M/1):(oo/FIFO)")
+print("--------------------------------------------------------------")
+print("The mean arrival rate per second : %0.2f "%lam)
+print("The mean service rate per second : %0.2f "%mu)
+if (lam <  mu):
+    Ls=lam/(mu-lam)
+    Lq=Ls-lam/mu
+    Ws=Ls/lam
+    Wq=Lq/lam
+    print("Average number of objects in the system : %0.2f "%Ls)
+    print("Average number of objects in the conveyor :  %0.2f "%Lq)
+    print("Average waiting time of an object in the system : %0.2f secs"%Ws)
+    print("Average waiting time of an object in the conveyor : %0.2f secs"%Wq)
+    print("Probability that the system is busy : %0.2f "%(lam/mu) )
+    print("Probability that the system is empty : %0.2f "%(1-lam/mu) )
+else:
+    print("Warning! Objects Over flow will happen in the conveyor")
+print("---------------------------------------------------------------")
+```
 
 ## Output :
+![image](https://github.com/Arunkumar215/Muttiple-capacity-with-infinite-capacity/assets/166196271/0ee75b82-a49c-4bc5-8dbe-124728ffe469)
+
 
 ## Result : 
+The average number of material in the sysytem and in the conveyor and waiting time are successfully found.
 
